@@ -24,9 +24,9 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background-color: #ffff00;
+            background-color: #8a039c;
             border-radius: 50%;
-            box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
+            box-shadow: 0 0 10px #8a039c, 0 0 20px #8a039c;
             animation: fall linear infinite;
             z-index: 10;
         }
@@ -179,10 +179,10 @@ body::before {
 
 @keyframes text-pulse {
     from {
-        text-shadow: 0 0 30px yellow, 0 0 50px yellow;
+        text-shadow: 0 0 30px rgb(234, 0, 255), 0 0 50px rgb(225, 0, 255);
     }
     to {
-        text-shadow: 0 0 40px yellow, 0 0 70px yellow, 0 0 100px yellow; 
+        text-shadow: 0 0 40px rgb(225, 0, 255), 0 0 70px rgb(242, 5, 250), 0 0 100px rgb(212, 0, 255); 
     }
 }
 
@@ -198,8 +198,8 @@ body::before {
 }
 
 .flower__light {
-    background-color: yellow !important; /* Morado */
-    box-shadow: 0 0 5px yellow, 0 0 10px #ccea08 !important;
+    background-color: rgb(212, 0, 255) !important; /* Morado */
+    box-shadow: 0 0 5px rgb(195, 0, 255), 0 0 10px #d008ea !important;
 }
 
 /* Aura que sube desde la flor */
@@ -253,27 +253,10 @@ body::before {
       <div class="long-g long-g--7"><div class="grow-ans" style="--d:3s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:3.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3.5s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
     </div>
     
-    <!-- Audio -->
-    <audio id="background-music" loop>
-        <source src="audio.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
     
     <script>
         // Iniciar todo automáticamente al cargar la página
         window.addEventListener('load', function() {
-            const backgroundMusic = document.getElementById('background-music');
-            
-            // Reproducir música automáticamente
-            backgroundMusic.play().catch(error => {
-                console.log('Reproducción automática prevenida:', error);
-                // En caso de que falle la reproducción automática, mostrar un mensaje
-                alert('Por favor, haz clic en cualquier parte de la página para iniciar la música');
-                document.body.addEventListener('click', function() {
-                    backgroundMusic.play();
-                }, { once: true });
-            });
-            
             // Iniciar las partículas después de 3 segundos
             setTimeout(startParticles, 3000);
             
@@ -391,7 +374,7 @@ body::before {
         }
         
         function showHackerText() {
-            const message = "Mas hermosa que las flores eres tu mi amor, te amo ❤️";
+            const message = "TE AMO MANDA❤️";
             const auraText = document.getElementById('aura-text');
             const finalMessage = document.getElementById('final-message');
             
@@ -460,3 +443,4 @@ body::before {
     <script src="main.js"></script>
 </body>
 </html>
+
